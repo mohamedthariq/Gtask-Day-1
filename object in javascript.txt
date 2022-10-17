@@ -1,0 +1,138 @@
+Objects and its internal representation in Javascript...
+
+JavaScript is an Object-Oriented Programming language. The objects form the building blocks which are considered to be the most important data-type for the programming language.
+
+JavaScript objects are similar to objects in real life which consists of different attributes and properties. These objects are defined as an unordered collection of related data, that are of primitive or reference types.
+
+An object is a standalone entity, with properties and type. These are defined in the form of “key: value” pairs.
+
+For example,
+
+    If your object is a student, it will have properties like name, age, address, id, etc and methods like updateAddress, updateNameetc.
+    These keys are variables or functions which are called as properties and methods of an object. You can create a JavaScript object as:
+
+    let ObjectName = {
+    Property1 : "Value",
+    Property2 : "Value",
+    ...
+    ...
+    }
+
+Anything that is not a primitive value is an Object. That includes arrays, functions, constructors, and objects themselves.
+In JavaScript think of an object as a list that contains items, and each item (a property or a method) in the list is stored by a key-value pair in memory as reference.
+
+Let’s see an object example.
+
+   const firstObj = {
+     Name: "Guvi"
+     "age": 28
+   }
+firstObj is an object with 2 properties Name and age and value as Guvi and 28 .
+
+JavaScript is template based and we can create objects without the need of having a class. Generally, an object is accompanied by a class that defines an object’s blueprints but JavaScript doesn’t require any class to be defined for objects
+
+How to Create a new Object?
+
+	There are three ways in which we can create a JavaScript object. Let’s go through each method:
+
+1. By Object Literal
+
+    Object literals are a comma-separated list of key-value pairs wrapped in curly braces. Object literal property values can be of any data type, including     array literals, functions, nested object literals or primitive data type.
+
+Example - 
+
+ 	 var student = {
+  	  id: 1,
+  	  name: "guvi",
+  	  age: "24",
+ 	  updateAddress: () => {
+   	  // logic to update address
+ 	   },
+  	   grade: ['A', 'A+', 'A']
+	  }
+
+	The student object keys in the above can be accessed via Dot notation - student.id, student.name, 
+	or via a square bracket notation -  student[‘id’], student[‘name’]
+
+2. By Creating instance of Object
+
+	We can use the new keyword to create and define an object. This method is similar to how objects are created in the Java programming language.
+
+	var student = new Object();
+
+      	student.name = "Chris Hemsworth";
+
+      	student.age = 21;
+
+      	student.branch = "Computer Science";
+
+	Every JavaScript function has a prototype object property by default(it is empty by default). Methods or properties may be attached to this 	property.
+
+3. By Using an Object Constructor
+
+	A function is created with arguments. Each argument value can be assigned in the current object by using this keyword.
+	We can also use an object constructor to initialize a JavaScript object. This method is also commonly known as object prototyping. The constructor 	takes in a few parameters and using those parameters, we define the value for each property in an object.
+
+	function stud(name, age, branch) {
+
+             this.name = name;
+
+       	     this.age = age;
+
+       	     this.branch = branch;
+
+      	}
+
+      var student = stud("Chris Hemsworth", 21, "Computer Science");
+
+JavaScript Object Properties:
+
+	1. We first define an object and name it student and add a few relevant properties.
+	2. The first method is to access the property by using the dot(.) notation - object.property
+	3. The second method is by using square brackets - object[property]
+	4. Lastly, we can store a property name, in the form of a string, in a variable and then use that variable to access the associated property.
+
+	eg: objectName.propertyName
+
+Methods:
+	
+	A method is a function associated with an object. It is also a property of an object. Methods are defined as the normal functions but they have to 	be assigned as the property of an object.
+
+The object method can be accessed as:
+
+	objectName.methodName()
+
+
+Accessors:
+
+	The JavaScript Accessors consist of Getters and Setters which are used to define the object accessors.
+
+Prototypes:
+
+	All JavaScript objects inherit properties and methods from a prototype. For example:
+
+	1. Date objects inherit from Date.prototype
+	2. Array objects inherit from Array.prototype
+	3. Person objects inherit from Person.prototype
+	4. The JavaScript prototype property is used to add new properties to object constructors.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

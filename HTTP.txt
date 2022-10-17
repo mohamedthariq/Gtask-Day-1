@@ -1,0 +1,82 @@
+HTTP1.1 vs HTTP2 -
+
+HTTP stands for hypertext transfer protocol, an application layer protocol.
+
+HTTP is the foundation for communication between clients and servers over the world wide web.
+
+Founder:
+
+    It was developed by Tim Berners Lee and his team in 1991, since then it has evolved from being able to exchange files in a semi-trusted laboratory environment to be able to carry images     and even HD videos across the web.
+
+Features:
+
+    1. HTTP client sends HTTP request to the server in the form a request message after receiving and processing the request message, a server responds with an HTTP response message, and        that’s why it is also called as a request-response protocol.
+
+    2. HTTP is a stateless protocol that means HTTP is not going to maintain any information about the users. Every request is new and separate from any previous request.
+
+version:
+	HTTP 1, HTTP 2
+
+HTTP 1.1:
+
+    HTTP/1.1 released in 1997.
+    HTTP 1.1 uses persistent connection which means only one connection will be created to fetch all the objects from the server.
+    HTTP 1.1 provides faster delivery of Web pages than the original HTTP and reduces Web traffic.
+
+Process:
+
+    1. In this process, a client sends a text-based request to a server by calling a method like GET or POST.
+    2. In response, the server sends a resource like an HTML page back to the client.
+
+Let’s say you are visiting a website at the domain www.example.com. When you navigate to this URL, the web browser on your computer sends an HTTP request in the form of a text-based message
+The requests and responses use single application layer for exchange of data.
+
+Example -
+	GET /index.html HTTP/1.1
+	Host: www.example.com
+
+	1. The above request uses the GET method
+	2. In response to this request, the example.com web server returns an HTML page to the requesting client, in addition to any images, stylesheets, or other resources called for in 	   the HTML.
+	3. The requests and responses will go back and forth between the server and client until the web browser has received all the resources necessary to render the contents of the HTML 	   page on your screen.
+
+HTTP 2.0:
+
+    HTTP/1.1 released in 2015
+    It was derived from the earlier experimental SPDY protocol.
+    HTTP 2.0 introduced to decrease latency, especially when dealing with mobile platforms and server-intensive graphics and videos.  
+    It was primarily developed at Google with the intention of reducing web page load latency.
+
+Process:
+
+    1. HTTp 2 protocol use the techniques such as compression, multiplexing, and prioritization. This protocol served as a template for HTTP/2 when the Hypertext Transfer Protocol working 	       group httpbis of the IETF (Internet Engineering Task Force).
+
+    2. From the beginning, many browsers supported this standardization effort, including Chrome, Opera, Internet Explorer, and Safari. Due in part to this browser support, there has been a        significant adoption rate among new sites.
+
+    3. HTTP/2 uses the binary framing layer to encapsulate all messages in binary format, while still maintaining HTTP semantics, such as verbs, methods, and headers.
+    The conversion of messages into binary allows HTTP/2 to try new approaches to data delivery not available in HTTP/1.1, a contrast that is at the root of the practical differences     between the two protocols.
+
+    4. HTTP/2 multiplexes streams of data within a single TCP connection. As a result, receive windows on the level of the TCP connection are not sufficient to regulate the delivery of             individual streams. It use WINDOW_UPDATE frame.
+
+    5. In web application, the client will send a GET request and receive a page in HTML, usually the index page of the site.
+
+    In response from its initial GET request, and thus must make additional requests to fetch these resources and complete putting the page together.
+    In HTTP/2, this process begins when the server sends a PUSH_PROMISE frame to inform the client that it is going to push a resource.
+
+Example -
+
+    method:		GET
+    scheme:		https
+    host:		example.com
+    path:		/academy
+    accept:		/image/jpeg
+    user-agent:	Mozilla/5.0 ...
+
+Advantage of HTTP/2:
+
+   1. HTTP/2 can send multiple requests for data in parallel over a single TCP connection. 
+   2. This is the most advanced feature of the HTTP/2 protocol because it allows you to download web files asynchronously from one server.
+   3. This reduces additional round trip time (RTT), making your website load faster without any optimization
+   4. HTTP/2 compress a large number of redundant header frames. It uses the HPACK specification as a simple and secure approach to header compression.
+   5. Efficient and robust in terms of processing of data between client and server.
+
+
